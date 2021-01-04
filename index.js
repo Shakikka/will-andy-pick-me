@@ -39,8 +39,8 @@ function randomAnswer() {
     answerReveal.classList.remove("hidden");
     image.classList.add("hidden");
     answerReveal.innerHTML = `
-    "${question.value}?"
-    ${answerReveal.value}
+    "${question.value.italics()}?"
+    ${answerReveal.value.bold()}
     `;
     question.value = "Ask your question here!"
   }
