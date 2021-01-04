@@ -10,3 +10,65 @@ light blue background: #E6ECF4;
 clear button: #DE4841;
 clear button disabled: #D0CDCD
 */
+header {
+  font-family: 'Life Savers', serif;
+  color: #2B4E80;
+  display: flex;
+  justify-content: center;
+}
+
+.woody {
+
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box1 {
+  background-color: #E6ECF4;
+
+}
+
+form {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  display: flex;
+  justify-content: flex-end;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+ .question {
+text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.submit {
+  background-color: #2B4E80;
+  color: white;
+}
+
+.image1 {
+  height: 40%;
+  width: 40%;
+}
+
+.eight-ball {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end
+}
