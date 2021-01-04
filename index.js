@@ -28,24 +28,24 @@ submitButton.addEventListener('click', randomAnswer);
 clearButton.addEventListener('click', clearText);
 
 function clearText() {
-  // if () {
-    answerReveal.innerHTML = "";
     answerReveal.classList.add("hidden");
     image.classList.remove("hidden");
-  // }
-}
+  };
 
 function randomAnswer() {
-  answerReveal.value = answers[getRandomIndex(answers)];
-  answerReveal.classList.remove("hidden");
-  image.classList.add("hidden");
-  answerReveal.innerHTML = `
-  "${question.value}?"
-  ${answerReveal.value}
-  `;
-  question.value = "Ask your question here!"
-}
+  if (question.value === "Ask your question here!" || question.value === "") {
+  } else {
+    answerReveal.value = answers[getRandomIndex(answers)];
+    answerReveal.classList.remove("hidden");
+    image.classList.add("hidden");
+    answerReveal.innerHTML = `
+    "${question.value}?"
+    ${answerReveal.value}
+    `;
+    question.value = "Ask your question here!"
+  }
+};
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}
+};
