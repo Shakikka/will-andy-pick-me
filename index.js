@@ -23,7 +23,17 @@ var answerReveal = document.querySelector(".answer-reveal");
 var submitButton = document.querySelector(".submit");
 var question = document.querySelector(".question");
 var image = document.querySelector(".image1");
+var clearButton = document.querySelector("button");
 submitButton.addEventListener('click', randomAnswer);
+clearButton.addEventListener('click', clearText);
+
+function clearText() {
+  // if () {
+    answerReveal.innerHTML = "";
+    answerReveal.classList.add("hidden");
+    image.classList.remove("hidden");
+  // }
+}
 
 function randomAnswer() {
   answerReveal.value = answers[getRandomIndex(answers)];
@@ -33,7 +43,7 @@ function randomAnswer() {
   "${question.value}?"
   ${answerReveal.value}
   `;
-  question.value = ""
+  question.value = "Ask your question here!"
 }
 
 function getRandomIndex(array) {
