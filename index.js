@@ -22,17 +22,18 @@ var answers = ["It is certain",
 var answerReveal = document.querySelector(".answer-reveal");
 var submitButton = document.querySelector(".submit");
 var question = document.querySelector(".question");
-var image = document.querySelector(".image1")
+var image = document.querySelector(".image1");
 submitButton.addEventListener('click', randomAnswer);
 
-
 function randomAnswer() {
- answerReveal.value = answers[getRandomIndex(answers)];
-answerReveal.classList.remove("hidden");
-image.classList.add("hidden");
-answerReveal.innerHTML = `
-"${question.value}"
-${answerReveal.value}`;
+  answerReveal.value = answers[getRandomIndex(answers)];
+  answerReveal.classList.remove("hidden");
+  image.classList.add("hidden");
+  answerReveal.innerHTML = `
+  "${question.value}?"
+  ${answerReveal.value}
+  `;
+  question.value = ""
 }
 
 function getRandomIndex(array) {
